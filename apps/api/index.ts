@@ -70,7 +70,7 @@ app.post("/signin",async(req, res)=>{
             return 
         }
         const JWT_SECRET = process.env.JWT_SECRET
-        const token = await jwt.sign({
+        const token =  jwt.sign({
             id : response.id
         },JWT_SECRET!)
 
