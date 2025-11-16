@@ -3,8 +3,10 @@ import { createSignInSchema, createSignUpSchema } from "./types"
 import bcrypt from "bcrypt"
 import { client } from "@repo/db/client"
 import jwt from "jsonwebtoken"
+import { authMiddlware } from "./middleware"
 
 const app = express()
+app.use(express.json())
 
 app.post("/signup",async(req,res)=>{
 
@@ -88,7 +90,7 @@ app.post("/signin",async(req, res)=>{
 })
 
 
-app.get("/repo",(req,res)=>{
+app.get("/calender",authMiddlware,(req,res)=>{
     
 })
 

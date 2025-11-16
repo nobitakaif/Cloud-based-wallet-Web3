@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/bcrypt": "^6.0.0",
+    "@repo/db" : "*",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.5",
     "@types/jsonwebtoken": "^9.0.10",
